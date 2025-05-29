@@ -1,0 +1,216 @@
+ /* CSS Reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f9;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar a i {
+    margin-right: 8px;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    color: #ffc107;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hamburger:hover {
+    transform: rotate(90deg);
+}
+
+/* Container for dashboard content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Summary card styling */
+.summary-card {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: cardFadeIn 0.5s ease-out;
+}
+
+.summary-card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInMenu {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        padding-top: 60px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #007bff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        animation: slideInMenu 0.3s ease-out;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .summary-card {
+        padding: 15px;
+    }
+
+    .summary-card h2 {
+        font-size: 18px;
+    }
+
+    .summary-card p {
+        font-size: 20px;
+    }
+}
+
+/* Disable animations on very small screens for performance */
+@media (max-width: 400px) {
+    .navbar {
+        animation: none;
+    }
+
+    .navbar ul {
+        animation: none;
+    }
+
+    .summary-card {
+        animation: none;
+    }
+}

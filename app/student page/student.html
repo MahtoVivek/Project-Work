@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - Add Student</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="navMenu">
+            <li><a href="/Project Work/app/main/main.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="/Project Work/app/student page/student.html"><i class="fas fa-user-plus"></i> Add Student</a></li>
+            <li><a href="/Project Work/app/student list/lists.html"><i class="fas fa-list"></i> View Students</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container for the application -->
+    <div class="container">
+        <!-- Header -->
+        <h1>Student Management System</h1>
+
+        <!-- Form for adding/editing students -->
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" placeholder="Enter name" required>
+                <div id="nameError" class="error">Name is required</div>
+            </div>
+            <div class="form-group">
+                <label for="rollNo">Roll No</label>
+                <input type="text" id="rollNo" placeholder="Enter roll number" required>
+                <div id="rollNoError" class="error">Roll No is required and must be unique</div>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" id="course" placeholder="Enter course" required>
+                <div id="courseError" class="error">Course is required</div>
+            </div>
+            <div class="form-group">
+                <label for="session">Session</label>
+                <input type="text" id="session" placeholder="Enter session (e.g., 2023-2024)" required>
+                <div id="sessionError" class="error">Session is required</div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter 10-digit phone number" required>
+                <div id="phoneError" class="error">Phone number must be 10 digits</div>
+            </div>
+            <button type="submit" id="submitBtn">Add Student</button>
+        </form>
+
+        <!-- Success message -->
+        <div id="successMessage" class="success-message">
+            <i class="fas fa-check-circle"></i> Student saved successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

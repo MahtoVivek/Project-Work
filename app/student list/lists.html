@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="navMenu">
+            <li><a href="/Project Work/app/main/main.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="/Project Work/app/student page/student.html"><i class="fas fa-user-plus"></i> Add Student</a></li>
+            <li><a href="/Project Work/app/student list/lists.html"><i class="fas fa-list"></i> View Students</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container for the view page -->
+    <div class="container">
+        <!-- Header -->
+        <h1>View Students</h1>
+
+        <!-- Table to display students -->
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable()">Name <i class="fas fa-sort"></i></th>
+                    <th>Roll No</th>
+                    <th>Course</th>
+                    <th>Session</th>
+                    <th>Phone</th>
+                    <th>Last Updated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+        </table>
+
+        <!-- No data message -->
+        <div id="noData" class="no-data">No student data available</div>
+
+        <!-- Button to go back to add student page -->
+        <a href="index.html" class="back-btn">Back to Add Student</a>
+
+        <!-- Link to go back to add student page -->
+        <a href="index.html" class="back-link">Back to Add Student (Link)</a>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
